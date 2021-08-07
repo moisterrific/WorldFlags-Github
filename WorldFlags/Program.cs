@@ -40,7 +40,7 @@ namespace WorldFlags
 		{
 			if (args.Parameters.Count == 0 || args.Parameters.Count > 1)
 			{
-				args.Player.SendInfoMessage($"[ChangeFlag] Current flag status:\nFor The Worthy(ftw): {Main.getGoodWorld}\nDrunk World(5162020 seed): {Main.drunkWorld}\nCommand usage: {TShock.Config.CommandSpecifier}changeflag <flag>");
+				args.Player.SendInfoMessage($"[ChangeFlag] Current flag status:\nFor The Worthy(ftw): {Main.getGoodWorld}\nDrunk World(5162020 seed): {Main.drunkWorld}\nCommand usage: {TShock.Config.Settings.CommandSpecifier}changeflag <flag>");
 				return;
 			}
 			switch (args.Parameters[0].ToLower())
@@ -69,7 +69,7 @@ namespace WorldFlags
 					args.Player.SendSuccessMessage($"Drunk world " + (Main.drunkWorld ? "enabled." : "disabled."));
 					break;
 				default:
-					args.Player.SendInfoMessage($"[ChangeFlag] Current flag status:\nFor The Worthy(ftw): {Main.getGoodWorld}\nDrunk World(5162020 seed): {Main.drunkWorld}\nCommand usage: {TShock.Config.CommandSpecifier}changeflag <flag>");
+					args.Player.SendInfoMessage($"[ChangeFlag] Current flag status:\nFor The Worthy(ftw): {Main.getGoodWorld}\nDrunk World(5162020 seed): {Main.drunkWorld}\nCommand usage: {TShock.Config.Settings.CommandSpecifier}changeflag <flag>");
 					break;
 			}
 		}
